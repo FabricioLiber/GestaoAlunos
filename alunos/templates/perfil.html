@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load materialize %}
+{% load bootstrap %}
+
+
+{% block title %} Cadastro {% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <h3>Perfil</h3>
+        <div class="col s4">
+            <img src={{aluno.foto}} alt="">
+        </div>
+        <div class="col s8">
+            <h5>{{aluno.nome}} {{aluno.sobrenome}}</h5>
+            <p>{{aluno.data_nasc}}</p>
+            <p>{{aluno.sexo}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button style="display: block; margin-top: 20px;" class="btn waves-effect waves-light" type="submit" name="action">Voltar</button>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

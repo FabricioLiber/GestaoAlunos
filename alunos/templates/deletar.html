@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load materialize %}
+{% load bootstrap %}
+
+
+{% block title %} Cadastro {% endblock %}
+
+{% block main %}
+
+    <h5>Deseja deletar o aluno {{aluno.nome}} {{aluno.sobrenome}}?</h5>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit">Deletar</button>
+    </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

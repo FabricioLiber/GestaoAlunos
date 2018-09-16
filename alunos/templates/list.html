@@ -1,0 +1,51 @@
+{##}
+
+{% extends 'base.html' %}
+{% load materialize %}
+{% load bootstrap %}
+
+
+{% block title %} Home {% endblock %}
+
+{% block main %}
+    <table class="striped centered">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Data de Nascimento</th>
+                <th>Sexo</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos %}
+
+                <tr>
+                    <td><a href="{% url 'ver_perfil' aluno.id %}">{{aluno.nome}} {{aluno.sobrenome}}</a></td>
+                    <td>{{aluno.data_nasc}}</td>
+                    <td>{{aluno.sexo}}</td>
+                    <td>
+                      <a href="{% url 'atualizar_aluno' aluno.id %}">
+                        <i class="material-icons">create</i>
+                      </a>
+                      <a href="{% url 'deletar_aluno' aluno.id %}">
+                        <i class="material-icons">delete</i>
+                      </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+            <tfooter>
+              <tr>
+                  <td colspan="3"></td>
+                  <td><a href="{% url 'cadastrar_aluno' %}" class="btn-floating btn-large waves-effect waves-light red">
+                      <i class="material-icons">add</i>
+                  </a></td>
+              </tr>
+            </tfooter>
+        </table>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
