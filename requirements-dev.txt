@@ -5,7 +5,6 @@ django-bootstrap-form==3.4
 django-materialize==1.0.1a2
 django-materialize-form==0.1.1
 Pillow==5.2.0
-pkg-resources==0.0.0
 psycopg2==2.7.5
 python-decouple==3.1
 pytz==2018.5
