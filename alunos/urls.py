@@ -7,7 +7,7 @@ from .views import ver_perfil
 
 
 urlpatterns = [
-    path('list/', listar_alunos, name = "listar_alunos"),
+    path('', listar_alunos, name = "listar_alunos"),
     path('new/', cadastrar_aluno, name = "cadastrar_aluno"),
     path('update/<int:id>/', atualizar_aluno, name = "atualizar_aluno"),
     path('delete/<int:id>/', deletar_aluno, name = "deletar_aluno"),
